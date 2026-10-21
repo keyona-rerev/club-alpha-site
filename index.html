@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Club Alpha — Student Founder Development Program</title>
 <meta name="description" content="A five-month student founder development program for Birmingham scholars. October through February, ending on the pitch stage.">
-<meta name="theme-color" content="#0A47CF">
+<meta name="theme-color" content="#F0F7F7">
 <meta property="og:title" content="Club Alpha — Student Founder Development Program">
 <meta property="og:description" content="A five-month student founder development program for Birmingham scholars. October through February, ending on the pitch stage.">
 <meta property="og:type" content="website">
@@ -18,13 +18,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --blue:#0A47CF;
-  --blue-deep:#0839A8;
-  --white:#fff;
-  --soft:rgba(255,255,255,.84);
-  --line:rgba(255,255,255,.28);
-  --grid:rgba(255,255,255,.07);
-  --yellow:#FFD21F;
+  --bg:#F0F7F7;
+  --tint:#E3F1F1;
+  --paper:#fff;
+  --ink:#0D1F2D;
+  --soft:#2F4655;
+  --slate:#5D7F95;
+  --line:#BCD6D6;
+  --grid:rgba(13,31,45,.055);
+  --cyan:#1A9E9E;
+  --cyan-text:#0E7C7C;
+  --accent:#7C3AED;
+  --grad:linear-gradient(90deg,#1A9E9E,#7C3AED);
   --f-serif:'Instrument Serif','Times New Roman',serif;
   --f-body:'Inter',system-ui,sans-serif;
   --f-mono:'Space Mono',ui-monospace,monospace;
@@ -34,7 +39,7 @@
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  background-color:var(--blue);
+  background-color:var(--bg);
   background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
   background-size:72px 72px;
   color:var(--soft);
@@ -43,14 +48,14 @@ body{
   line-height:1.65;
   -webkit-font-smoothing:antialiased;
 }
-a{color:var(--white)}
-a:focus-visible,video:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
+a{color:var(--ink)}
+a:focus-visible,video:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
 .wrap{max-width:1180px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
 
-.mono,.eyebrow{font-family:var(--f-mono);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--white);margin:0}
-.eyebrow .y{color:var(--yellow)}
-.sec-title{font-family:var(--f-serif);font-weight:400;font-style:italic;font-size:clamp(44px,7.4vw,92px);line-height:.98;letter-spacing:-.02em;color:var(--white);margin:18px 0 0}
-.sec-title em{font-style:italic;color:var(--yellow)}
+.mono,.eyebrow{font-family:var(--f-mono);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin:0}
+.eyebrow .y{color:var(--accent)}
+.sec-title{font-family:var(--f-serif);font-weight:400;font-style:italic;font-size:clamp(44px,7.4vw,92px);line-height:.98;letter-spacing:-.02em;color:var(--ink);margin:18px 0 0}
+.sec-title em,.pitch-h em{font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
 .sec-sub{margin:22px 0 0;font-size:clamp(17px,1.8vw,20px);line-height:1.6;max-width:40em;color:var(--soft)}
 .sec-head{max-width:46em}
 section{border-top:1px solid var(--line)}
@@ -65,15 +70,15 @@ section{border-top:1px solid var(--line)}
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;border-top:0}
 .topbar{position:relative;z-index:3;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:28px var(--pad) 0}
 .topbar .nav{display:flex;gap:clamp(14px,3vw,40px)}
-.topbar a{font-family:var(--f-mono);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--white);text-decoration:none}
-.topbar a:hover,.foot a:hover{color:var(--yellow)}
+.topbar a{font-family:var(--f-mono);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.topbar a:hover,.foot a:hover{color:var(--accent)}
 .r{text-align:right}
 .hero-mid{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;padding:40px var(--pad)}
 .hero-kicker{margin-left:clamp(0px,9vw,140px)}
-.hero-title{font-family:var(--f-serif);font-style:italic;font-weight:400;font-size:clamp(80px,22vw,320px);line-height:.82;letter-spacing:-.045em;color:var(--white);margin:14px 0 0;text-align:center;white-space:nowrap}
+.hero-title{font-family:var(--f-serif);font-style:italic;font-weight:400;font-size:clamp(80px,22vw,320px);line-height:.82;letter-spacing:-.045em;color:var(--ink);margin:14px 0 0;text-align:center;white-space:nowrap}
 .hero-tag{text-align:right;margin:10px clamp(0px,9vw,140px) 0 0}
 .hero-lede{font-size:clamp(18px,2.1vw,24px);line-height:1.5;max-width:26em;margin:clamp(24px,4vw,44px) auto 0;text-align:center;color:var(--soft)}
-.hero-lede strong{color:var(--white);font-weight:600}
+.hero-lede strong{color:var(--ink);font-weight:600}
 .hero-foot{position:relative;z-index:3;display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:end;padding:0 var(--pad) 28px}
 .hero-foot .c{text-align:center}
 
@@ -81,25 +86,25 @@ section{border-top:1px solid var(--line)}
 .meta{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
 .meta-cell{padding:30px var(--pad) 32px;border-right:1px solid var(--line)}
 .meta-cell:last-child{border-right:0}
-.meta-k{font-family:var(--f-serif);font-style:italic;font-size:clamp(30px,4vw,48px);line-height:1;color:var(--white);letter-spacing:-.02em}
+.meta-k{font-family:var(--f-serif);font-style:italic;font-size:clamp(30px,4vw,48px);line-height:1;color:var(--ink);letter-spacing:-.02em}
 .meta-v{margin-top:12px}
 
 /* chart */
 .chart-shell{margin-top:clamp(30px,4vw,48px);border:1px solid var(--line);padding:clamp(10px,2.5vw,28px)}
 .chart{display:block;width:100%;height:auto;overflow:visible}
-.c-grid{stroke:rgba(255,255,255,.16);stroke-width:1}
-.c-axis{stroke:rgba(255,255,255,.6);stroke-width:1.5}
-.c-bench{fill:none;stroke:#fff;stroke-opacity:.7;stroke-width:2;stroke-dasharray:9 11;stroke-linecap:round;opacity:0}
-.c-alpha{fill:none;stroke:var(--yellow);stroke-width:4;stroke-dasharray:1;stroke-dashoffset:1;stroke-linecap:round}
-.c-fill{fill:var(--yellow);fill-opacity:.2;opacity:0}
-.c-dot{fill:#fff;opacity:0}
-.c-ring{fill:none;stroke:var(--yellow);stroke-width:3;opacity:0}
-.c-tick{font-family:var(--f-mono);font-weight:700;font-size:14px;letter-spacing:.14em;fill:rgba(255,255,255,.75)}
-.c-tick-end{fill:#fff}
-.c-note{font-family:var(--f-mono);font-weight:700;font-size:12.5px;letter-spacing:.12em;fill:rgba(255,255,255,.75);opacity:0}
-.c-flag{font-family:var(--f-mono);font-weight:700;font-size:13px;letter-spacing:.14em;fill:#fff;opacity:0}
-.c-alphamark{font-family:var(--f-serif);font-style:italic;font-size:64px;fill:var(--yellow);opacity:0}
-.c-alphacap{font-family:var(--f-mono);font-weight:700;font-size:12.5px;letter-spacing:.12em;fill:rgba(255,255,255,.75);opacity:0}
+.c-grid{stroke:#D3E4E4;stroke-width:1}
+.c-axis{stroke:#9DB8B8;stroke-width:1.5}
+.c-bench{fill:none;stroke:#7E9AA8;stroke-width:2;stroke-dasharray:9 11;stroke-linecap:round;opacity:0}
+.c-alpha{fill:none;stroke:url(#alphaGrad);stroke-width:4;stroke-dasharray:1;stroke-dashoffset:1;stroke-linecap:round}
+.c-fill{fill:url(#fillGrad);opacity:0}
+.c-dot{fill:var(--ink);opacity:0}
+.c-ring{fill:none;stroke:var(--accent);stroke-width:3;opacity:0}
+.c-tick{font-family:var(--f-mono);font-weight:700;font-size:14px;letter-spacing:.14em;fill:var(--slate)}
+.c-tick-end{fill:var(--ink)}
+.c-note{font-family:var(--f-mono);font-weight:700;font-size:12.5px;letter-spacing:.12em;fill:var(--slate);opacity:0}
+.c-flag{font-family:var(--f-mono);font-weight:700;font-size:13px;letter-spacing:.14em;fill:var(--ink);opacity:0}
+.c-alphamark{font-family:var(--f-serif);font-style:italic;font-size:64px;fill:var(--cyan-text);opacity:0}
+.c-alphacap{font-family:var(--f-mono);font-weight:700;font-size:12.5px;letter-spacing:.12em;fill:var(--slate);opacity:0}
 @keyframes draw{to{stroke-dashoffset:0}}
 @keyframes rise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
 @keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
@@ -113,67 +118,67 @@ section{border-top:1px solid var(--line)}
 .c-alphacap{animation:rise .7s ease-out 2.15s forwards}
 
 /* video */
-.video-frame{margin-top:clamp(30px,4vw,48px);border:1px solid var(--line);padding:clamp(8px,1.4vw,16px);background:var(--blue-deep)}
+.video-frame{margin-top:clamp(30px,4vw,48px);border:1px solid var(--line);padding:clamp(8px,1.4vw,16px);background:var(--paper)}
 .video-frame video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#000}
 
 /* why */
 .why-inner{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,6vw,80px);align-items:start}
-.glyph{font-family:var(--f-serif);font-style:italic;font-size:clamp(160px,26vw,340px);line-height:.74;color:var(--yellow);user-select:none}
-.why-body{font-size:clamp(19px,2.1vw,24px);line-height:1.55;color:var(--white);margin:18px 0 0}
-.why-body b{font-weight:600;color:var(--yellow)}
-.why-kicker{margin:26px 0 0;font-family:var(--f-serif);font-style:italic;font-size:clamp(28px,3.6vw,44px);line-height:1.1;letter-spacing:-.015em;color:var(--white)}
+.glyph{font-family:var(--f-serif);font-style:italic;font-size:clamp(160px,26vw,340px);line-height:.74;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.1em;user-select:none}
+.why-body{font-size:clamp(19px,2.1vw,24px);line-height:1.55;color:var(--ink);margin:18px 0 0}
+.why-body b{font-weight:600;color:var(--accent)}
+.why-kicker{margin:26px 0 0;font-family:var(--f-serif);font-style:italic;font-size:clamp(28px,3.6vw,44px);line-height:1.1;letter-spacing:-.015em;color:var(--ink)}
 
 /* race */
 .race-card{margin-top:clamp(30px,4vw,46px);border:1px solid var(--line);padding:clamp(14px,3vw,34px)}
 .race{display:block;width:100%;max-width:880px;height:auto;margin:0 auto}
-.w-cap{font-family:var(--f-mono);font-weight:700;font-size:14px;letter-spacing:.12em;fill:rgba(255,255,255,.72)}
-.w-cap-ink{fill:#fff}
-.w-txt{font-family:var(--f-body);font-size:18px;fill:rgba(255,255,255,.85)}
-.w-txt-ink{fill:#fff;font-weight:600}
-.w-big{font-family:var(--f-serif);font-style:italic;font-size:56px;fill:var(--yellow)}
-.w-wind{stroke:#fff;stroke-width:4;stroke-linecap:round;fill:none;opacity:.8}
-.w-wind-head{fill:#fff;opacity:.8}
-.w-lane{stroke:rgba(255,255,255,.28);stroke-width:1.5}
-.w-bar-wind{fill:rgba(255,255,255,.4)}
-.w-bar-you{fill:var(--yellow)}
-.w-guide{stroke:rgba(255,255,255,.7);stroke-width:2;stroke-dasharray:6 7}
+.w-cap{font-family:var(--f-mono);font-weight:700;font-size:14px;letter-spacing:.12em;fill:var(--slate)}
+.w-cap-ink{fill:var(--ink)}
+.w-txt{font-family:var(--f-body);font-size:18px;fill:var(--soft)}
+.w-txt-ink{fill:var(--ink);font-weight:600}
+.w-big{font-family:var(--f-serif);font-style:italic;font-size:56px;fill:var(--accent)}
+.w-wind{stroke:var(--cyan);stroke-width:4;stroke-linecap:round;fill:none;opacity:.8}
+.w-wind-head{fill:var(--cyan);opacity:.8}
+.w-lane{stroke:#D3E4E4;stroke-width:1.5}
+.w-bar-wind{fill:#BFE3E3}
+.w-bar-you{fill:url(#youGrad)}
+.w-guide{stroke:var(--slate);stroke-width:2;stroke-dasharray:6 7}
 
 .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:22px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
 .cell{padding:26px 24px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-.cell .mono{color:var(--yellow)}
-.cell-h{font-family:var(--f-serif);font-style:italic;font-size:clamp(28px,3vw,36px);line-height:1.05;letter-spacing:-.015em;color:var(--white);margin:14px 0 10px;font-weight:400}
+.cell .mono{color:var(--cyan-text)}
+.cell-h{font-family:var(--f-serif);font-style:italic;font-size:clamp(28px,3vw,36px);line-height:1.05;letter-spacing:-.015em;color:var(--ink);margin:14px 0 10px;font-weight:400}
 .cell-p{margin:0;font-size:15.5px;line-height:1.6;color:var(--soft)}
 
-.check{margin-top:22px;border:1px solid var(--yellow);padding:clamp(24px,3.4vw,38px)}
-.check .eyebrow{color:var(--yellow)}
-.check-q{font-family:var(--f-serif);font-style:italic;font-size:clamp(30px,4vw,48px);line-height:1.08;letter-spacing:-.015em;color:var(--white);margin:14px 0 0}
+.check{margin-top:22px;border:1px solid var(--accent);padding:clamp(24px,3.4vw,38px)}
+.check .eyebrow{color:var(--accent)}
+.check-q{font-family:var(--f-serif);font-style:italic;font-size:clamp(30px,4vw,48px);line-height:1.08;letter-spacing:-.015em;color:var(--ink);margin:14px 0 0}
 .check-a{margin:12px 0 0;font-size:clamp(17px,1.9vw,21px);color:var(--soft)}
-.check-a b{color:var(--yellow)}
-.big-quote{font-family:var(--f-serif);font-style:italic;font-weight:400;font-size:clamp(34px,5.4vw,70px);line-height:1.04;letter-spacing:-.025em;color:var(--white);margin:clamp(34px,5vw,56px) 0 0;max-width:17em}
-.big-quote span{color:var(--yellow)}
+.check-a b{color:var(--accent)}
+.big-quote{font-family:var(--f-serif);font-style:italic;font-weight:400;font-size:clamp(34px,5.4vw,70px);line-height:1.04;letter-spacing:-.025em;color:var(--ink);margin:clamp(34px,5vw,56px) 0 0;max-width:17em}
+.big-quote span{color:var(--cyan-text)}
 
 /* arc */
 .steps{margin-top:clamp(30px,4vw,48px);border-top:1px solid var(--line)}
 .step{display:grid;grid-template-columns:100px 1fr;gap:clamp(14px,3vw,40px);padding:28px 0 30px;border-bottom:1px solid var(--line);align-items:baseline}
-.step-n{font-family:var(--f-mono);font-weight:700;font-size:13px;letter-spacing:.1em;color:var(--yellow)}
-.step-h{font-family:var(--f-serif);font-style:italic;font-weight:400;font-size:clamp(34px,4.4vw,56px);line-height:1;letter-spacing:-.02em;color:var(--white);margin:0 0 8px}
+.step-n{font-family:var(--f-mono);font-weight:700;font-size:13px;letter-spacing:.1em;color:var(--accent)}
+.step-h{font-family:var(--f-serif);font-style:italic;font-weight:400;font-size:clamp(34px,4.4vw,56px);line-height:1;letter-spacing:-.02em;color:var(--ink);margin:0 0 8px}
 .step-p{margin:0;font-size:17px;line-height:1.6;max-width:44em;color:var(--soft)}
 
-/* outcomes (inverted) */
-.out{background:#fff;color:var(--blue);border-top:0}
-.out .eyebrow{color:var(--blue)}
-.out .sec-title{color:var(--blue)}
-.outs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:clamp(32px,4vw,52px);border-top:2px solid var(--blue);border-left:2px solid var(--blue)}
-.out-cell{padding:30px 26px 34px;border-right:2px solid var(--blue);border-bottom:2px solid var(--blue)}
-.out-n{font-family:var(--f-mono);font-weight:700;font-size:12px;letter-spacing:.16em;color:var(--blue)}
-.out-h{font-family:var(--f-serif);font-style:italic;font-weight:400;font-size:clamp(30px,3.2vw,40px);line-height:1.04;letter-spacing:-.015em;color:var(--blue);margin:16px 0 12px}
-.out-p{margin:0;font-size:16px;line-height:1.6;color:#1a2f66}
-.out-close{margin:clamp(32px,4vw,48px) 0 0;font-family:var(--f-serif);font-style:italic;font-size:clamp(26px,3.2vw,40px);line-height:1.12;letter-spacing:-.015em;color:var(--blue);max-width:22em}
+/* outcomes (tint) */
+.out{background:var(--tint);color:var(--ink);border-top:0}
+.out .eyebrow{color:var(--ink)}
+.out .sec-title{color:var(--ink)}
+.outs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:clamp(32px,4vw,52px);border-top:2px solid var(--ink);border-left:2px solid var(--ink)}
+.out-cell{padding:30px 26px 34px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.out-n{font-family:var(--f-mono);font-weight:700;font-size:12px;letter-spacing:.16em;color:var(--ink)}
+.out-h{font-family:var(--f-serif);font-style:italic;font-weight:400;font-size:clamp(30px,3.2vw,40px);line-height:1.04;letter-spacing:-.015em;color:var(--ink);margin:16px 0 12px}
+.out-p{margin:0;font-size:16px;line-height:1.6;color:var(--soft)}
+.out-close{margin:clamp(32px,4vw,48px) 0 0;font-family:var(--f-serif);font-style:italic;font-size:clamp(26px,3.2vw,40px);line-height:1.12;letter-spacing:-.015em;color:var(--ink);max-width:22em}
 
 /* pitch */
 .pitch{position:relative;overflow:hidden}
-.pitch-h{font-family:var(--f-serif);font-style:italic;font-weight:400;font-size:clamp(90px,20vw,290px);line-height:.85;letter-spacing:-.045em;color:var(--white);margin:20px 0 0}
-.pitch-h em{font-style:italic;color:var(--yellow)}
+.pitch-h{font-family:var(--f-serif);font-style:italic;font-weight:400;font-size:clamp(90px,20vw,290px);line-height:.85;letter-spacing:-.045em;color:var(--ink);margin:20px 0 0}
+
 .pitch-body{margin:clamp(26px,3vw,38px) 0 0;font-size:clamp(18px,2vw,22px);line-height:1.6;max-width:37em;color:var(--soft)}
 .pitch-body + .pitch-body{margin-top:16px}
 
@@ -244,12 +249,12 @@ section{border-top:1px solid var(--line)}
     <span class="mono r"><a href="https://rerev.io">rerev.io</a></span>
   </div>
 
-  <div class="px" style="left:6%;top:22%;width:26px;animation-delay:-1s"><svg viewBox="0 0 7 7" fill="#FFD21F"><use href="#pxa"/></svg></div>
-  <div class="px" style="left:16%;top:64%;width:18px;animation-delay:-3s"><svg viewBox="0 0 7 7" fill="#FF5A4D"><use href="#pxa"/></svg></div>
-  <div class="px" style="left:44%;top:16%;width:20px;animation-delay:-2s"><svg viewBox="0 0 7 7" fill="#46E0A0"><use href="#pxa"/></svg></div>
-  <div class="px" style="right:8%;top:30%;width:30px;animation-delay:-4s"><svg viewBox="0 0 7 7" fill="#FFD21F"><use href="#pxa"/></svg></div>
-  <div class="px" style="right:19%;top:72%;width:22px;animation-delay:-.5s"><svg viewBox="0 0 7 7" fill="#FF5A4D"><use href="#pxa"/></svg></div>
-  <div class="px" style="right:3%;top:58%;width:14px;animation-delay:-2.5s"><svg viewBox="0 0 7 7" fill="#46E0A0"><use href="#pxa"/></svg></div>
+  <div class="px" style="left:6%;top:22%;width:26px;animation-delay:-1s"><svg viewBox="0 0 7 7" fill="#7C3AED"><use href="#pxa"/></svg></div>
+  <div class="px" style="left:16%;top:64%;width:18px;animation-delay:-3s"><svg viewBox="0 0 7 7" fill="#1A9E9E"><use href="#pxa"/></svg></div>
+  <div class="px" style="left:44%;top:16%;width:20px;animation-delay:-2s"><svg viewBox="0 0 7 7" fill="#0E7C7C"><use href="#pxa"/></svg></div>
+  <div class="px" style="right:8%;top:30%;width:30px;animation-delay:-4s"><svg viewBox="0 0 7 7" fill="#7C3AED"><use href="#pxa"/></svg></div>
+  <div class="px" style="right:19%;top:72%;width:22px;animation-delay:-.5s"><svg viewBox="0 0 7 7" fill="#1A9E9E"><use href="#pxa"/></svg></div>
+  <div class="px" style="right:3%;top:58%;width:14px;animation-delay:-2.5s"><svg viewBox="0 0 7 7" fill="#0E7C7C"><use href="#pxa"/></svg></div>
 
   <div class="hero-mid">
     <p class="mono hero-kicker">Student founder program</p>
@@ -283,6 +288,7 @@ section{border-top:1px solid var(--line)}
       <svg class="chart" viewBox="0 0 1000 400" role="img" aria-labelledby="chartTitle chartDesc">
         <title id="chartTitle">The alpha curve across the program</title>
         <desc id="chartDesc">A dashed benchmark line representing what's expected, and a rising curve climbing above it from October to February. The shaded gap between the two lines is alpha. The curve ends at Pitch Day in February.</desc>
+        <defs><linearGradient id="alphaGrad" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#1A9E9E"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient><linearGradient id="fillGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1A9E9E" stop-opacity=".08"/><stop offset="100%" stop-color="#7C3AED" stop-opacity=".28"/></linearGradient></defs>
         <line class="c-grid" x1="100" y1="42" x2="100" y2="318"/>
         <line class="c-grid" x1="295" y1="42" x2="295" y2="318"/>
         <line class="c-grid" x1="490" y1="42" x2="490" y2="318"/>
@@ -349,6 +355,7 @@ section{border-top:1px solid var(--line)}
       <svg class="race" viewBox="0 0 800 480" role="img" aria-labelledby="raceTitle raceDesc">
         <title id="raceTitle">Alpha is the speed you add beyond the wind</title>
         <desc id="raceDesc">Two runners. A wind pushes both forward and helps one runner gain 10 seconds. The second runner, who also trained hard, gains 15 seconds. The extra 5 seconds beyond the wind is alpha.</desc>
+        <defs><linearGradient id="youGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1A9E9E"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
         <g>
           <line class="w-wind" x1="60" y1="52" x2="320" y2="52"/>
           <polygon class="w-wind-head" points="320,42 340,52 320,62"/>
@@ -364,19 +371,19 @@ section{border-top:1px solid var(--line)}
         <line class="w-lane" x1="60" y1="168" x2="740" y2="168"/>
         <text class="w-cap" x="60" y="196">RUNNER HELPED BY THE WIND ALONE</text>
         <rect class="w-bar-wind" x="60" y="208" width="340" height="28" rx="14"/>
-        <circle cx="400" cy="222" r="18" fill="#fff"/>
+        <circle cx="400" cy="222" r="18" fill="#1A9E9E"/>
         <text class="w-txt w-txt-ink" x="428" y="229">+10 sec</text>
 
         <line class="w-lane" x1="60" y1="262" x2="740" y2="262"/>
         <text class="w-cap" x="60" y="290">YOU: THE WIND + YOUR OWN EFFORT</text>
         <rect class="w-bar-you" x="60" y="302" width="510" height="28" rx="14"/>
-        <circle cx="570" cy="316" r="18" fill="#FFD21F"/>
+        <circle cx="570" cy="316" r="18" fill="#7C3AED"/>
         <text class="w-txt w-txt-ink" x="598" y="323">+15 sec</text>
 
         <line class="w-guide" x1="400" y1="236" x2="400" y2="366"/>
-        <line x1="400" y1="356" x2="570" y2="356" stroke="#FFD21F" stroke-width="5" stroke-linecap="round"/>
-        <line x1="400" y1="346" x2="400" y2="366" stroke="#FFD21F" stroke-width="5" stroke-linecap="round"/>
-        <line x1="570" y1="346" x2="570" y2="366" stroke="#FFD21F" stroke-width="5" stroke-linecap="round"/>
+        <line x1="400" y1="356" x2="570" y2="356" stroke="#7C3AED" stroke-width="5" stroke-linecap="round"/>
+        <line x1="400" y1="346" x2="400" y2="366" stroke="#7C3AED" stroke-width="5" stroke-linecap="round"/>
+        <line x1="570" y1="346" x2="570" y2="366" stroke="#7C3AED" stroke-width="5" stroke-linecap="round"/>
         <text class="w-big" x="485" y="416" text-anchor="middle">&#945; = +5 sec</text>
         <text class="w-txt" x="485" y="442" text-anchor="middle">Your extra speed from your</text>
         <text class="w-txt" x="485" y="466" text-anchor="middle">own effort and smart choices.</text>
@@ -421,7 +428,7 @@ section{border-top:1px solid var(--line)}
 
     <div class="check" style="border-color:var(--line)">
       <p class="eyebrow">AI, used properly</p>
-      <p class="check-a" style="margin-top:14px;font-size:clamp(18px,2vw,22px);color:var(--white)">Scholars use AI <b>the way working founders and analysts use it</b> — as a research and building tool, not a shortcut. They run customer interviews, size a market, build a prototype, and defend real numbers with it, and they leave fluent in the tools a business setting will expect them to already know.</p>
+      <p class="check-a" style="margin-top:14px;font-size:clamp(18px,2vw,22px);color:var(--ink)">Scholars use AI <b>the way working founders and analysts use it</b> — as a research and building tool, not a shortcut. They run customer interviews, size a market, build a prototype, and defend real numbers with it, and they leave fluent in the tools a business setting will expect them to already know.</p>
     </div>
   </div>
 </section>
@@ -466,9 +473,9 @@ section{border-top:1px solid var(--line)}
 
 <!-- PITCH -->
 <section class="pitch" id="pitch">
-  <div class="px" style="right:9%;top:16%;width:34px;animation-delay:-1.5s"><svg viewBox="0 0 7 7" fill="#FFD21F"><use href="#pxa"/></svg></div>
-  <div class="px" style="right:22%;top:60%;width:20px;animation-delay:-3.5s"><svg viewBox="0 0 7 7" fill="#FF5A4D"><use href="#pxa"/></svg></div>
-  <div class="px" style="right:5%;top:70%;width:16px;animation-delay:-2s"><svg viewBox="0 0 7 7" fill="#46E0A0"><use href="#pxa"/></svg></div>
+  <div class="px" style="right:9%;top:16%;width:34px;animation-delay:-1.5s"><svg viewBox="0 0 7 7" fill="#7C3AED"><use href="#pxa"/></svg></div>
+  <div class="px" style="right:22%;top:60%;width:20px;animation-delay:-3.5s"><svg viewBox="0 0 7 7" fill="#1A9E9E"><use href="#pxa"/></svg></div>
+  <div class="px" style="right:5%;top:70%;width:16px;animation-delay:-2s"><svg viewBox="0 0 7 7" fill="#0E7C7C"><use href="#pxa"/></svg></div>
   <div class="wrap sec">
     <p class="eyebrow">February</p>
     <h2 class="pitch-h">pitch <em>day</em></h2>
